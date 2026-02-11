@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambodia-Culture</title>
+  <!-- link style.css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Search button - BLACK */
+    .btn-outline-success {
+      border-radius: 20px;
+      border: 2px solid white;
+      color: white;
+      background-color: transparent;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-success:hover {
+      background-color: #000;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Cambodia-Culture</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="video.html#video">Video</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="map.html">Map</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Menu</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="royal-palace.html">Royal Palace</a></li>
+              <li><a class="dropdown-item" href="khmer-traditional-clothing.html">Khmer traditional clothing</a></li>
+              <li><a class="dropdown-item" href="khmer-folk-games.html">Khmer folk games</a></li>
+              <li><a class="dropdown-item" href="famous-dishes-in-cambodia.html">Famous dishes in cambodia</a></li>
+              <li><a class="dropdown-item" href="User-managemen-system.html">User managemen system</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="d-flex" onsubmit="searchMenu(event)">
+          <input class="form-control me-2" type="search" id="searchInput" placeholder="Search menu">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= SPACER ================= -->
+  <!-- Spacer to prevent content from being hidden behind fixed navbar -->
+  <div style="height:70px;"></div>
+
+
+  <!-- Video Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+
+      <!-- Title -->
+      <h2 class="text-center mb-5 fw-bold"> Cambodia Videos Temple</h2>
+
+      <!-- Videos Row -->
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://drive.google.com/file/d/19L6II_Ar4xHMaE1aLiJ56poKLC49sfJV/preview" allow="autoplay" allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="card-body text-center">
+              <h5 class="card-title">Banteay Srei Temple</h5>
+              <p class="card-text">Beautiful Banteay Srei Temple .</p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Video Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow">
+            <div class="ratio ratio-16x9">
+             <iframe src="https://drive.google.com/file/d/1zDVUEmUUsTb4rcxDYD1e3FXvF2Bm4eBt/preview" allow="autoplay" allowfullscreen>
+              </iframe>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Angkor Wat Temple</h5>
+              <p class="card-text">Beautiful Angkor Wat Temple</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://drive.google.com/file/d/11OxYos03i3drgjvylcyh1yU7CeTetPmu/preview" allow="autoplay" allowfullscreen>
+              </iframe>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Baiyong Temple</h5>
+              <p class="card-text">Beautiful Baiyong Temple.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Video Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+
+      <!-- Title -->
+      <h2 class="text-center mb-5 fw-bold"> Cambodia Videos Traditional Dance</h2>
+
+      <!-- Videos Row -->
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://drive.google.com/file/d/1HjiUao4B9Q1Ijzo1poR2DWaB0qgR3quz/preview" allow="autoplay" allowfullscreen>
+              </iframe>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">របាំព្រះរាជទ្រព្យ </h5>
+              <p class="card-text">(Royal Treasure Dance)</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow">
+            <div class="ratio ratio-16x9">
+               <iframe src="https://drive.google.com/file/d/1-JvLbJGW0gq8ly6S8kLb1l-CfrOs1aSD/preview" allow="autoplay" allowfullscreen>
+              </iframe>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">របាំអប្សរា </h5>
+              <p class="card-text">(Apsara Dance).</p>
+            </div>
+          </div>
+        </div>
+        <!-- Video Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://drive.google.com/file/d/1zyi2ftKT5Y-wTejO2c3k3GHqkpy97g0q/preview" allow="autoplay" allowfullscreen>
+              </iframe>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">របាំជូនពរ </h5>
+              <p class="card-text">(Blessing Dance).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h4>About Cambodia</h4>
+          <p>Discover the rich culture, amazing wildlife, and breathtaking landscapes of Cambodia. Your journey to the
+            Kingdom of Wonder begins here.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a class="dropdown-item" href="royal palace.html">Royal Palace</a></li>
+            <li><a class="dropdown-item" href="khmer-traditional clothing.html">Khmer traditional clothing</a></li>
+            <li><a class="dropdown-item" href="khmer-folk-games.html">Khmer folk games</a></li>
+            <li><a class="dropdown-item" href="famous-dishes-in-cambodia.html">Famous dishes in cambodia</a></li>
+            <li><a class="dropdown-item" href="User-managemen-system.html">User managemen system</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@cambodiaexplore.com</p>
+          <p>Phone: +855 1234 5678</p>
+          <p>Address: Phnom Penh, Cambodia</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Cambodia Explore. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
