@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambodia-Culture</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Login Check -->
+  <script>
+    if (sessionStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "authentication-login.html";
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Cambodia-Culture</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="video.html#video">Video</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="map.html">Map</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Menu</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="royal-palace.html">Royal Palace</a></li>
+              <li><a class="dropdown-item" href="khmer-traditional-clothing.html">Khmer Traditional Clothing</a></li>
+              <li><a class="dropdown-item" href="khmer-folk-games.html">Khmer Folk Games</a></li>
+              <li><a class="dropdown-item" href="famous-dishes-in-cambodia.html">Famous Dishes in Cambodia</a></li>
+              <li><a class="dropdown-item" href="User-managemen-system.html">User Management System</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="d-flex position-relative" onsubmit="return false;">
+          <input class="form-control me-2" type="search" id="searchInput" placeholder="Search menu"
+            onkeyup="liveSearch()">
+          <button class="btn btn-outline-success" type="button" onclick="goSearch()">Search</button>
+
+          <ul id="searchResult" class="list-group position-absolute" style="top:100%; width:100%; z-index:1000;"></ul>
+        </form>
+
+
+
+
+        <button class="btn btn-outline-success ms-3" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function logout() {
+      sessionStorage.removeItem("isLoggedIn");
+      window.location.href = "authentication-login.html";
+    }
+  </script>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 style="color: aliceblue;">Welcome to Cambodia</h1>
+      <p>The Kingdom of Wonder</p>
+    </div>
+  </section>
+
+  <!-- ================= HERO 2 ================= -->
+  <section class="hero-2">
+    <div class="hero-2-content">
+      <div class="hero-2-image">
+        <img src="images/map-logo.png" alt="Cambodia Map">
+      </div>
+      <div class="hero-2-text">
+        <h2>Cambodia is an wonderfull place,Beacuse it's people are full of smiles and honesty</h2>
+        <p>Discover the beauty of temples, nature, and culture</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FLOWER ================= -->
+  <section class="flower-section">
+    <h3>Flower as National Symbol of Cambodia</h3>
+    <div class="flower-gallery">
+      <div class="flower-card">
+        <img src="images/flower-logo.jpg" alt="Romdoul Flower">
+        <p class="flower-caption">Romdoul Flower</p>
+      </div>
+      <div class="flower-card">
+        <img src="images/flower-logo2.jpg" alt="Romdoul Flower">
+        <p class="flower-caption">Romdoul Flower</p>
+      </div>
+      <div class="flower-card">
+        <img src="images/flower-logo1.jpg" alt="Romdoul Flower">
+        <p class="flower-caption">Romdoul Flower</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOD ================= -->
+  <section class="food-section">
+    <h3>Food as National Symbol of Cambodia</h3>
+    <div class="food-gallery">
+      <div class="food-card">
+        <img src="images/food-logo1.jpg" alt="Amok Fish">
+        <p class="food-caption">Amok Fish</p>
+      </div>
+      <div class="food-card">
+        <img src="images/food-logo2.jpeg" alt="Amok Snail">
+        <p class="food-caption">Amok Snail</p>
+      </div>
+      <div class="food-card">
+        <img src="images/food-logo3.jpg" alt="Amok Fish">
+        <p class="food-caption">Amok Fish</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TREE ================= -->
+  <section class="tree-section">
+    <h3>Tree as National Symbol of Cambodia</h3>
+    <div class="tree-gallery">
+      <div class="tree-card">
+        <img src="images/tree-logo1.jpg" alt="Palm Tree">
+        <p class="tree-caption">Palm Tree</p>
+      </div>
+      <div class="tree-card">
+        <img src="images/tree-logo2.jpg" alt="Palm Fruit">
+        <p class="tree-caption">Palm Fruit</p>
+      </div>
+      <div class="tree-card">
+        <img src="images/tree-logo3.jpg" alt="Palm Tree">
+        <p class="tree-caption">Palm Tree</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FRUIT ================= -->
+  <section class="fruit-section">
+    <h3>Fruit as National Symbol of Cambodia</h3>
+    <div class="fruit-gallery">
+      <div class="fruit-card">
+        <img src="images/fruit-logo2.jpg" alt="Chicken Egg Banana">
+        <p class="fruit-caption">Chicken Egg Banana</p>
+      </div>
+      <div class="fruit-card">
+        <img src="images/fruit-logo1.webp" alt="Chicken Egg Banana">
+        <p class="fruit-caption">Chicken Egg Banana</p>
+      </div>
+      <div class="fruit-card">
+        <img src="images/fruit-logo3.jpg" alt="Chicken Egg Banana">
+        <p class="fruit-caption">Chicken Egg Banana</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ANIMALS ================= -->
+  <section class="animals-section">
+    <h3>Animals as National Symbols of Cambodia</h3>
+    <div class="animals-gallery">
+      <div class="animals-card">
+        <img src="images/animal-logo1.webp" alt="Kouprey">
+        <p class="animals-caption">Kouprey</p>
+      </div>
+      <div class="animals-card">
+        <img src="images/animal-logo2.jpg" alt="Giant Ibis">
+        <p class="animals-caption">Giant Ibis</p>
+      </div>
+      <div class="animals-card">
+        <img src="images/animal-logo3.jpg" alt="Giant Mekong Barb">
+        <p class="animals-caption">Giant Mekong Barb</p>
+      </div>
+      <div class="animals-card">
+        <img src="images/animal-logo4.jpg" alt="Royal Turtle">
+        <p class="animals-caption">Royal Turtle</p>
+      </div>
+      <div class="animals-card">
+        <img src="images/animal-logo5.jpg" alt="Royal Turtle">
+        <p class="animals-caption">Royal Turtle</p>
+      </div>
+      <div class="animals-card">
+        <img src="images/animal-logo6.jpg" alt="Animals">
+        <p class="animals-caption">Animals</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONCLUSION ================= -->
+  <section class="conclusion-section">
+    <h2>Conclusion</h2>
+    <div class="conclusion-content">
+      <div class="conclusion-text">
+        <h3>Cambodia is a beautiful country</h3>
+        <p>
+          Discover the beauty of temples, nature, food, and culture in Cambodia.
+          Explore the unique landscapes, vibrant traditions, and amazing wildlife
+          that make Cambodia a top destination in Southeast Asia.
+        </p>
+      </div>
+      <div class="conclusion-image">
+        <img src="images/picture-logocambodia.webp" alt="Angkor Wat">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h4>About Cambodia</h4>
+          <p>Discover the rich culture, amazing wildlife, and breathtaking landscapes of Cambodia. Your journey to the
+            Kingdom of Wonder begins here.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="royal-palace.html">Royal Palace</a></li>
+            <li><a href="khmer-traditional-clothing.html">Khmer Traditional Clothing</a></li>
+            <li><a href="khmer-folk-games.html">Khmer Folk Games</a></li>
+            <li><a href="famous-dishes-in-cambodia.html">Famous Dishes in Cambodia</a></li>
+            <li><a href="User-managemen-system.html">User Management System</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@cambodiaexplore.com</p>
+          <p>Phone: +855 1234 5678</p>
+          <p>Address: Phnom Penh, Cambodia</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Cambodia Explore. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="search.js"></script>
+
+
+
+</body>
+
+</html>
+
+
+</body>
+
+</html>
